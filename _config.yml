@@ -8,7 +8,7 @@
 # URL VARIABLES
 #
 # url is your gh-pages base, following the pattern: username.github.io
-url: wdrefubc.github.io
+url: https://wdrefubc.github.io
 # baseurl is your github repository's name prefixed with a /
 baseurl: /collectionBuilderTest
 # location of code, the full url to your github repository
@@ -31,7 +31,7 @@ author: CollectionBuilder
 # COLLECTION SETTINGS
 #
 # choose metadata: this is the name of the csv file in your _data directory that describes the objects in your collection
-metadata: psychiana_cbdemo 
+metadata: psychianademo 
 
 ##########
 # GOOGLE SERVICES [optional!]
