@@ -8,11 +8,11 @@
 # URL VARIABLES
 #
 # url is your gh-pages base, following the pattern: username.github.io
-url: https://wdrefubc.github.io
+url: https://woodward-library.github.io
 # baseurl is your github repository's name prefixed with a /
-baseurl: /collectionBuilderTest
+baseurl: /collectionBuilderExample
 # location of code, the full url to your github repository
-source-code: https://github.com/wdrefubc/collectionBuilderTest
+source-code: https://github.com/Woodward-Library/collectionBuilderExample
 
 ##########
 # SITE SETTINGS
