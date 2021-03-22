@@ -18,12 +18,16 @@ source-code: https://github.com/Woodward-Library/collectionBuilderExample
 # SITE SETTINGS
 #
 # title of site appears in banner
-title: Kyle's Test Collection 
+title: UBC Science Literacy Weeek 
 # tagline, a short phrase that will appear throughout the site in the top banner
-tagline: testing the Collection builder tool in Github
+tagline: September 2020
 # description appears in meta tags and other locations
 # this description might appear in search result lists, keep around 160 characters max
-description: "Template for creating small digital collection exhibits.<br><br>  Psychiana was a New Thought denomination created in 1928 by Frank Bruce Robinson (1886–1948), with headquarters in Moscow, Idaho. It began and largely remained a mail-order enterprise, recruiting people through advertising in popular magazines and through direct mail solicitations."
+description: "Celebrate Science Literacy Week (September 21-27, 2020) from coast to coast.
+
+This guide is a collaboration between the UBC Vancouver Library and the UBC Okanagan Library. There are fun books, activities, and workshop suggestions from both libraries within this guide, many of which you can join in on from the comfort of your home! 
+
+Explore and celebrate the amazing, rich biodiversity in Canada and beyond with us this week!"
 # creator of the digital collection, to appear in meta tags; we typically use our GitHub usernames but feel free to just use your name
 author: Woodward Library
 
