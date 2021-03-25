@@ -22,6 +22,7 @@
         var format = record.format;
         var objectLink = record.filename;
         var itemImage, itemLink;
+        var bookLink = record.resourcelink;
         if (format.includes('image')) {
             itemImage= '<div class="gallery-img" data-src="' + objectLink + '"><img class="img-fluid" src="' + objectLink + '" alt="' + objectTitle + '"><p><small>Click to view full screen</small></p></div>';
             itemLink= '<a href="' + objectLink + '" target="_blank" class="btn btn-dark" title="Object download">Download Image</a>';
@@ -42,7 +43,7 @@
             itemLink= '<a href="' + objectLink + '" target="_blank" class="btn btn-dark" title="Object download">Download Video File</a>';
         } else if (format.includes('book')) {
             itemImage= '<div class="gallery-img" data-src="' + objectLink + '"><img class="img-fluid" src="' + objectLink + '" alt="' + objectTitle + '"><p><small>Click to view full screen</small></p></div>';
-            itemLink= '<a href="' + objectLink + '" target="_blank" class="btn btn-dark" title="Object download">View Book Somewhere</a>';
+            itemLink= '<a href="' + bookLink + '" target="_blank" class="btn btn-dark" title="Object download">View Book Somewhere</a>';
         }
 
         else {
