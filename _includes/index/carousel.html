@@ -1,4 +1,4 @@
-{%- assign image-items = site.data[site.metadata ] | where_exp: "item","item.format contains 'image'" -%}
+{%- assign image-items = site.data[site.metadata ] | where_exp: "item","item.format contains 'image'|'book'" -%}
 {%- assign youtube-items = site.data[site.metadata ] | where_exp: "item","item.youtubeid" -%}
 {%- assign carousel-items = image-items | concat: youtube-items -%}
 {%- assign carousel-size = carousel-items | size | at_most: 9 -%}
@@ -17,7 +17,7 @@
                         {% endfor %}
                     </ol>
                     <div id="carouselInner" class="carousel-inner">
-                        
+
                     </div>
                     <a class="carousel-control-prev" href="#imageCarousel" role="button" data-slide="prev">
                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
