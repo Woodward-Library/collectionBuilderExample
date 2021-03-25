@@ -2,7 +2,10 @@
 # front matter
 ---
 @charset "utf-8";
-
+//ubc style
+.bg-dark {
+    background-color: #2F5D7C!important;
+}
 // base variables
 $base-font-family: {{ site.data.theme.base-font-family | default: '""' }};
 $base-font-size: {{ site.data.theme.base-font-size | default: '""' }};
@@ -29,7 +32,7 @@ $on-jumbo:        1200px;
 }
 
 /* buttons to theme */
-{% assign btns = site.data.config-theme-colors | where_exp: "item","item.color != nil" %} 
+{% assign btns = site.data.config-theme-colors | where_exp: "item","item.color != nil" %}
 {% for btn in btns %}
 ${{ btn.color_class }}: {{ btn.color }};
 {% endfor %}
