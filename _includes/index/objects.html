@@ -16,9 +16,9 @@
             {% when 'video' %}
             <a class="text-dark" href="{{ 'video' | prepend: '/browse.html#' | relative_url }}">Videos <span class="far fa-file-video"></span></a><br>
             {% when 'book' %}
-            <a class="text-dark" href="{{ 'book' | prepend: '/browse.html#' | relative_url }}">Books <span class="far fa-book"></span></a><br>
+            <a class="text-dark" href="{{ 'book' | prepend: '/browse.html#' | relative_url }}">Books <span class="far fa-file"></span></a><br>
             {% else %}
-            <a class="text-dark" href="{{ 'pdf' | prepend: '/browse.html#' | relative_url }}">PDFs <span class="far fa-book"></span></a><br>
+            <a class="text-dark" href="{{ 'pdf' | prepend: '/browse.html#' | relative_url }}">PDFs <span class="far fa-file"></span></a><br>
             {% endcase %}
             {% endif %}
             {%- endfor -%}
