@@ -1,6 +1,7 @@
 {%- assign image-items = site.data[site.metadata ] | where_exp: "item","item.format contains 'image'" -%}
 {%- assign youtube-items = site.data[site.metadata ] | where_exp: "item","item.youtubeid" -%}
-{%- assign carousel-items = image-items | concat: youtube-items -%}
+{%- assign book-items = site.data[site.metadata ] | where_exp: "item","item.format contains 'book'" -%}
+{%- assign carousel-items = image-items | concat: youtube-items | concat: book-items -%}
 <script>
 (function(){
     /* add item data and shuffle */
@@ -15,7 +16,7 @@
         itemImg = carouselItems[i][1];
         // calculate item link
         itemLink = "{{ '/item.html' | absolute_url | append: '?id=' }}" + carouselItems[i][2];
-        // create carousel slide 
+        // create carousel slide
         slide = "<div class='carousel-item text-center py-2'><img class='image-fluid mx-auto h-100 lazyload' alt='image highlight' data-src='" + itemImg + "'> <div class='carousel-caption'><h5 class='carousel-item-title text-white py-2'>" + carouselItems[i][0] + "</h5><a target='_blank' href='" + itemLink + "' class='btn btn-sm btn-primary'>View Item</a></div></div>";
         slides += slide;
     }
