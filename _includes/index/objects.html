@@ -18,7 +18,7 @@
             {% when 'book' %}
             <a class="text-dark" href="{{ 'book' | prepend: '/browse.html#' | relative_url }}">Books <span class="far fa-book"></span></a><br>
             {% else %}
-            <a class="text-dark" href="{{ 'pdf' | prepend: '/browse.html#' | relative_url }}">PDFs <span class="far fa-file"></span></a><br>
+            <a class="text-dark" href="{{ 'pdf' | prepend: '/browse.html#' | relative_url }}">PDFs <span class="far fa-book"></span></a><br>
             {% endcase %}
             {% endif %}
             {%- endfor -%}
