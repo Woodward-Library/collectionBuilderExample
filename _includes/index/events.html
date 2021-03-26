@@ -68,6 +68,8 @@
             {% case t %}
             {% when 'event' %}
 {{eventTitle}}
+{{events}}
+
 
             {% else %}
             <a class="text-dark" href="{{ 'pdf' | prepend: '/browse.html#' | relative_url }}">PDFs <span class="far fa-file"></span></a><br>
