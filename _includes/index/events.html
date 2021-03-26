@@ -19,9 +19,13 @@
 
                 {% case t %}
                   {% when 'event' %}
-                    {{eventTitle}}
-                    {{eventDate}}
-{{itemLink}}
+                  <ul>
+                    {% for item in eventTitle %}
+                    <li>{{eventTitle}}</li>
+                    <li>{{eventDate}}</li>
+                    <li>{{itemLink}}</li>
+                     {% endfor %}
+                  </ul>
                {% else %}
 
                 {% endcase %}
