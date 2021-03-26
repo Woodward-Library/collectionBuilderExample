@@ -7,11 +7,11 @@
 {%- assign eventTitle = events | map:"title" -%}
 {%- assign eventDate = events | map:"date" -%}
 {%- assign objectid = events | map:"objectid" -%}
-{%- assign itemLink =  '/events.html' | absolute_url  -%}
+{%- assign itemLink =  objectid | prepend: '/events.html' | absolute_url  -%}
 
 <div class="card mb-3" >
     <div class="card-body">
-        <h5 class="card-title">Event Test</h5>
+        <h5 class="card-title">Events</h5>
         <p class="card-text">
             {% for t in types %}
               {%- assign count = formats | where_exp: 'item','item contains t' | size -%}
