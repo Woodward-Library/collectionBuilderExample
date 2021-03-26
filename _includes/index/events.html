@@ -7,7 +7,7 @@
 {%- assign eventTitle = events | map:"title" -%}
 {%- assign eventDate = events | map:"date" -%}
 {%- assign objectid = events | map:"objectid" -%}
-{%- assign itemLink =  prepend: '/browse.html#' | relative_url  -%}
+{%- assign itemLink =  objectid + 'hello' -%}
 
 <div class="card mb-3" >
     <div class="card-body">
@@ -23,7 +23,8 @@
                     {% for item in eventTitle %}
                     <li>{{eventTitle[forloop.index0]}}</li>
                     <li>{{eventDate[forloop.index0]}}</li>
-                    <li>{{itemLink}}</li>
+                    <li>{{itemLink[forloop.index0]}}</li>
+                    <br>
                      {% endfor %}
                   </ul>
                {% else %}
