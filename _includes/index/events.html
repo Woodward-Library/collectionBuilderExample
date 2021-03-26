@@ -49,17 +49,21 @@
 
 {%- assign formats = site.data[site.metadata] | map: "format" -%}
 {%- assign types = "event;image" | split: ";" -%}
+{%- assign eventTitle = site.data[site.metadata] | map: "title" -%}
+{%- assign eventDate = site.data[site.metadata] | map: "date" -%}
+
 <div class="card mb-3" >
     <div class="card-body">
         <h5 class="card-title">Event Test</h5>
         <p class="card-text">
             {% for t in types %}
-            {%- assign count = formats | where_exp: 'item','item contains t' | size -%}
-            {% if count > 0 %}
-            {{ count }}
+              {%- assign count = formats | where_exp: 'item','item contains t' | size -%}
+              {% if count > 0 %}
+              {{ count }}
             {% case t %}
             {% when 'event' %}
-
+{{eventTitle}}
+{{eventDate}}
             {% else %}
             <a class="text-dark" href="{{ 'pdf' | prepend: '/browse.html#' | relative_url }}">PDFs <span class="far fa-file"></span></a><br>
             {% endcase %}
