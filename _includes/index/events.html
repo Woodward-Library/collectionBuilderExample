@@ -7,8 +7,7 @@
 {%- assign eventTitle = events | map:"title" -%}
 {%- assign eventDate = events | map:"date" -%}
 {%- assign objectid = events | map:"objectid" -%}
-{%- assign itemLink = "url + baseurl + '/item.html' + '?id='  + objectid" -%}
-
+{%- assign itemLink =  prepend: '/browse.html#' | relative_url  -%}
 
 <div class="card mb-3" >
     <div class="card-body">
