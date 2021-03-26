@@ -49,10 +49,10 @@
 
 {%- assign formats = site.data[site.metadata] | map: "format" -%}
 {%- assign types = "event;image" | split: ";" -%}
-{%- assign eventTitle = site.data[site.metadata] | map: "title" -%}
 {%- assign eventDate = site.data[site.metadata] | map: "date" -%}
 
 {%- assign events = site.data[site.metadata ] | where_exp: "item","item.format contains 'event'" -%}
+{%- assign eventTitle = events.title -%}
 
 
 
@@ -67,7 +67,7 @@
               {{ count }}
             {% case t %}
             {% when 'event' %}
-{{events}}
+{{eventTitle}}
 
             {% else %}
             <a class="text-dark" href="{{ 'pdf' | prepend: '/browse.html#' | relative_url }}">PDFs <span class="far fa-file"></span></a><br>
