@@ -44,3 +44,28 @@
         </p>
     </div>
 </div>
+
+
+
+{%- assign formats = site.data[site.metadata] | map: "format" -%}
+{%- assign types = "event;image" | split: ";" -%}
+<div class="card mb-3" >
+    <div class="card-body">
+        <h5 class="card-title">Event Test</h5>
+        <p class="card-text">
+            {% for t in types %}
+            {%- assign count = formats | where_exp: 'item','item contains t' | size -%}
+            {% if count > 0 %}
+            {{ count }}
+            {% case t %}
+            {% when 'event' %}
+
+            {% else %}
+            <a class="text-dark" href="{{ 'pdf' | prepend: '/browse.html#' | relative_url }}">PDFs <span class="far fa-file"></span></a><br>
+            {% endcase %}
+            {% endif %}
+            {%- endfor -%}
+            <a class="btn btn-sm btn-outline-secondary mt-2" href="{{ '/data.html' | relative_url }}">View table</a>
+        </p>
+    </div>
+</div>
