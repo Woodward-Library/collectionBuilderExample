@@ -53,7 +53,7 @@
 
 {%- assign events = site.data[site.metadata ] | where_exp: "item","item.format contains 'event'" -%}
 {%- assign eventTitle = events | map:"title" -%}
-
+{%- assign eventDate = events | map:"date" -%}
 
 
 
@@ -68,8 +68,7 @@
             {% case t %}
             {% when 'event' %}
 {{eventTitle}}
-{{events}}
-
+{{eventDate}}
 
             {% else %}
             <a class="text-dark" href="{{ 'pdf' | prepend: '/browse.html#' | relative_url }}">PDFs <span class="far fa-file"></span></a><br>
