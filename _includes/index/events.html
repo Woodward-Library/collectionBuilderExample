@@ -52,6 +52,11 @@
 {%- assign eventTitle = site.data[site.metadata] | map: "title" -%}
 {%- assign eventDate = site.data[site.metadata] | map: "date" -%}
 
+{%- assign events = site.data[site.metadata ] | where_exp: "item","item.format contains 'event'" -%}
+
+
+
+
 <div class="card mb-3" >
     <div class="card-body">
         <h5 class="card-title">Event Test</h5>
@@ -62,8 +67,8 @@
               {{ count }}
             {% case t %}
             {% when 'event' %}
-{{eventTitle}}
-{{eventDate}}
+{{events}}
+
             {% else %}
             <a class="text-dark" href="{{ 'pdf' | prepend: '/browse.html#' | relative_url }}">PDFs <span class="far fa-file"></span></a><br>
             {% endcase %}
