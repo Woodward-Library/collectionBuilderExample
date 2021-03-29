@@ -45,7 +45,10 @@
             itemImage= '<div class="gallery-img" data-src="' + objectLink + '"><img class="img-fluid" src="' + objectLink + '" alt="' + objectTitle + '"><p><small>Click to view full screen</small></p></div>';
             itemLink= '<a href="' + bookLink + '" target="_blank" class="btn btn-dark" title="Object download">View Book Somewhere</a>';
         }
-
+        else if (format.includes('event')) {
+            itemImage= '<div class="gallery-img" data-src="' + objectLink + '"><img class="img-fluid" src="' + objectLink + '" alt="' + objectTitle + '"><p><small>Click to view full screen</small></p></div>';
+            itemLink= '<a href="' + bookLink + '" target="_blank" class="btn btn-dark" title="Object download">View Event Somewhere</a>';
+        }
         else {
             /* fall back to no preview if it doesn't know the format */
             itemImage= '<img class="w-50" src="{{ "/assets/img/file.svg" | relative_url }}" alt="No preview found">';
