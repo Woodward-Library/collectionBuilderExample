@@ -5,6 +5,8 @@
 //ubc style
 .bg-dark {
     background-color: #2F5D7C!important;
+    background-image:  url(../img/ubc7-clf-sprite-white-2x.png)!important;
+    
 }
 // base variables
 $base-font-family: {{ site.data.theme.base-font-family | default: '""' }};
