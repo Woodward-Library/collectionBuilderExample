@@ -23,7 +23,7 @@
                     {% for item in eventTitle %}
                     <li>{{eventTitle[forloop.index0]}}</li>
                     <li>{{eventDate[forloop.index0]}}</li>
-                    <li> <a class="text-dark" href="{{ objectid[forloop.index0] | prepend: '/item.html#' | relative_url }}">link </a></li>
+                    <li> <a class="text-dark" href="{{ objectid[forloop.index0] | prepend: '/item.html?id=' | relative_url }}">link </a></li>
                     <br>
                      {% endfor %}
                   </ul>
