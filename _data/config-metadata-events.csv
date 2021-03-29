@@ -1,0 +1,12 @@
+field,display_name,browse_link
+title,Title,
+creator,Coordinator,
+date,Event Date,
+description,Description,
+subject,Department,TRUE
+location,Location,
+latitude,Latitude,
+longitude,Longitude,
+source,Source,
+identifier,Source Identifier,
+resourcelink,Registration Link,
