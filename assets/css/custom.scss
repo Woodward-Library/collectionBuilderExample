@@ -33,10 +33,16 @@ $on-jumbo:        1200px;
 
 //UBC style
 .bg-dark {
-    background-color: #2F5D7C!important;
+    background-color: #e6e6e6!important;
+
+}
+.bg-dark a{
+ color:black;
 }
 
-
+#home-banner{
+  background-color: #2F5D7C;
+}
 
 #ubc-logo {
   background-image: url(../img/ubc7-clf-sprite-white-2x.png) !important;
