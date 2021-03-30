@@ -37,18 +37,6 @@ $on-jumbo:        1200px;
 }
 
 
-#masthead {
-    background: white;
-    border-bottom:1px solid #eee;
-    height: 90px;
-    padding: 0 20px;
-    @include for_breakpoint(mobile desktop) {
-        height:70px;
-        position:fixed;
-        width:100%;
-        top:0;
-    }
-}
 
 #ubc-logo {
   background-image: url(../img/ubc7-clf-sprite-white-2x.png) !important;
