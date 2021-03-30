@@ -55,15 +55,15 @@ $on-jumbo:        1200px;
   background-position: 16px -837px;
   width: 91.45299145299145%;
   padding-bottom: 90px;
-}
+ }
 }
 
-@@include media-query($on-palm){
+@include media-query($on-palm){
 #ubc-logo {
   background-position: 16px -837px;
   width: 91.45299145299145%;
   padding-bottom: 90px;
-}
+ }
 }
 
 
