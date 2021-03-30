@@ -50,20 +50,21 @@ $on-jumbo:        1200px;
   padding-bottom: 90px;
 }
 
-@mixin media-query($on-laptop)
+@include media-query($on-laptop) {
 #ubc-logo {
   background-position: 16px -837px;
   width: 91.45299145299145%;
   padding-bottom: 90px;
 }
+}
 
-@mixin media-query($on-palm)
+@@include media-query($on-palm){
 #ubc-logo {
   background-position: 16px -837px;
   width: 91.45299145299145%;
   padding-bottom: 90px;
 }
-
+}
 
 
 
