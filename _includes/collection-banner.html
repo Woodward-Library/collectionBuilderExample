@@ -41,6 +41,7 @@
   </div>>
 </div>
 
+<div id="home-banner-container" class="container-fluid mb-0 p-0">
 <div id="home-banner" class="container mb-0 p-0">
     <div id="home-title-box" >
         <div class="title-card p-2 text-center">
@@ -52,6 +53,8 @@
         <small><a class="text-info featured-link p-2" href="{{ site.data.theme.featured-image | prepend: '/item.html?id=' | relative_url }}" title="{{ featuredItem.title | escape }}">Featured Image</a></small>
     </div>{% endunless %}
 </div>
+</div>
+
 {%- else -%}
 <div class="container pt-2">
     <h1 class="h3">
