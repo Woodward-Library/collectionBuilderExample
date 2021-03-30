@@ -8,9 +8,10 @@
 }
 
 #ubc-logo {
-    background-image:  url(../img/ubc7-clf-sprite-white-2x.png)!important;
-    background-position: -83px 14px;
-    width: 91.45299145299145%;
+  background-image: url(../img/ubc7-clf-sprite-white-2x.png) !important;
+  background-position: 16px -437px;
+  width: 91.45299145299145%;
+  padding-bottom: 90px;
 }
 // base variables
 $base-font-family: {{ site.data.theme.base-font-family | default: '""' }};
