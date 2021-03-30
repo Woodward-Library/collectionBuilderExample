@@ -36,34 +36,30 @@ $on-jumbo:        1200px;
     background-color: #2F5D7C!important;
 }
 
+
+#masthead {
+    background: white;
+    border-bottom:1px solid #eee;
+    height: 90px;
+    padding: 0 20px;
+    @include for_breakpoint(mobile desktop) {
+        height:70px;
+        position:fixed;
+        width:100%;
+        top:0;
+    }
+}
+
 #ubc-logo {
   background-image: url(../img/ubc7-clf-sprite-white-2x.png) !important;
   background-position: 16px -437px;
   width: 91.45299145299145%;
   padding-bottom: 90px;
-}
-
-@media screen and (max-width: 767px)
-#ubc-logo {
-  background-position: 16px -837px;
-  width: 91.45299145299145%;
-  padding-bottom: 90px;
-}
-
-@include media-query($on-laptop) {
-#ubc-logo {
-  background-position: 16px -837px;
-  width: 91.45299145299145%;
-  padding-bottom: 90px;
- }
-}
-
-@include media-query($on-palm){
-#ubc-logo {
-  background-position: 16px -837px;
-  width: 91.45299145299145%;
-  padding-bottom: 90px;
- }
+  @include media-query($on-laptop){
+    background-position: 16px -837px;
+    width: 91.45299145299145%;
+    padding-bottom: 90px;
+  }
 }
 
 

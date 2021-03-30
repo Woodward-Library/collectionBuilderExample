@@ -18,14 +18,14 @@ source-code: https://github.com/Woodward-Library/collectionBuilderExample
 # SITE SETTINGS
 #
 # title of site appears in banner
-title: UBC Science Literacy Weeek 
+title: UBC Science Literacy Week
 # tagline, a short phrase that will appear throughout the site in the top banner
 tagline: September 2020
 # description appears in meta tags and other locations
 # this description might appear in search result lists, keep around 160 characters max
 description: "Celebrate Science Literacy Week (September 21-27, 2020) from coast to coast.
 
-This guide is a collaboration between the UBC Vancouver Library and the UBC Okanagan Library. There are fun books, activities, and workshop suggestions from both libraries within this guide, many of which you can join in on from the comfort of your home! 
+This guide is a collaboration between the UBC Vancouver Library and the UBC Okanagan Library. There are fun books, activities, and workshop suggestions from both libraries within this guide, many of which you can join in on from the comfort of your home!
 
 Explore and celebrate the amazing, rich biodiversity in Canada and beyond with us this week!"
 # creator of the digital collection, to appear in meta tags; we typically use our GitHub usernames but feel free to just use your name
@@ -45,16 +45,16 @@ metadata: newmetadata
 # Add your google-analytics-id to automatically add the embed code, e.g. "UA-76328753-1"
 # google-analytics-id:
 # to populate a Google CSE add the id, e.g. "002151703305773322890:1pu3smhw1t8"
-# google-cse-id: 
+# google-cse-id:
 
 ##########
 # ROBOTS EXCLUDE
 #
 # set noindex to true if you do NOT want Google to index your site
-# noindex: true 
+# noindex: true
 
 ##########
-# BUILD SETTINGS 
+# BUILD SETTINGS
 #
 # Note: use environment variable on build command to include analytics
 # JEKYLL_ENV=production jekyll build
