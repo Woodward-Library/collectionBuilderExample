@@ -6,6 +6,7 @@
 {% if layout.gallery == true or page.gallery == true %}{% include js/gallery-js.html %}{% endif %}
 {% if page.layout == "item" %}{% include js/item-js.html %}{% endif %}
 {% if page.layout == "events" %}{% include js/event-js.html %}{% endif %}
+{% if page.layout == "eventBrowse" %}{% include js/event-browse-js.html %}{% endif %}
 {% if page.layout == "data" %}{% include js/table-js.html %}{% endif %}
 {% if page.layout == "map" %}{% include js/map-js.html %}{% endif %}
 {% if page.layout == "subjects" and site.data.theme.subjects-fields %}{% include js/cloud-js.html fields=site.data.theme.subjects-fields min=site.data.theme.subjects-min stopwords=site.data.theme.subjects-stopwords %}{% endif %}
