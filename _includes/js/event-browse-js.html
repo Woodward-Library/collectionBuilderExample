@@ -1,5 +1,5 @@
 {%- assign items = site.data[site.metadata] | where_exp: 'item','item.objectid' -%}
-{%- assign fields = site.data.config-browse -%}
+{%- assign fields = site.data.config-event-browse -%}
 <script>
 
 function makeCard(obj) {
@@ -14,8 +14,9 @@ function makeCard(obj) {
     else {
       thumbSrc = '{{ "/assets/img/file.svg" | relative_url }}';
     }
-    //filtering out for just events
+    //if statement filtering out for just events
     if (obj.format.includes("event")) {
+
       // start card
       var card = '<div class="item col-lg-4 col-md-6 col-sm-12 mb-2"><div class="card">';
       // top image for photos
@@ -52,12 +53,8 @@ function makeCard(obj) {
       if(obj.format != "") {
         card += '<p class="card-text"><small><a class="btn btn-sm btn-outline-secondary" href="{{ '/browse.html' | relative_url }}#' + encodeURIComponent(obj.format) + '">' +
           obj.format.split("/").pop().toUpperCase() + ' <span class="';
-        if(obj.format.includes('image')){
+        if(obj.format.includes('event')){
           card += 'far fa-image';
-        } else if(obj.format.includes('audio')){
-          card += 'far fa-file-audio';
-        } else if(obj.format.includes('video')){
-          card += 'far fa-file-video';
         } else {
           card += 'far fa-file';
         }

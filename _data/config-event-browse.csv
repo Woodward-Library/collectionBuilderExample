@@ -1,0 +1,6 @@
+field,display_name,btn,hidden,sort_name
+date,Date,,,Date
+creator,Organizer,,TRUE,
+author,Author,,,
+subject,,TRUE,,
+location,,TRUE,,
