@@ -8,11 +8,11 @@ function makeCard(obj) {
     // find images
     var imgSrc, thumbSrc;
     // add images or thumb for objects based on format
-    if (obj.filename =="") {
+    if (obj.filename.size ==0) {
         thumbSrc = '{{ "/assets/img/file.svg" | relative_url }}';
       }
 
-    
+
     else {
       imgSrc = obj.filename;
     }
