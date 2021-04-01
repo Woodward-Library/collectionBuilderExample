@@ -6,10 +6,11 @@ function makeCard(obj) {
     // find item link
     var itemHref = "{{ '/events.html' | absolute_url | append: '?id=' }}" + obj.id;
     // find images
-    var filenameSize = '{{item.filename | size}}';
+    var filenameCheck = obj.filename;
+    var filenameSize = filenameCheck.length;
     var imgSrc, thumbSrc;
     // add images or thumb for objects based on format
-    if (obj.filename.size ==0) {
+    if (filenameSize==0) {
         thumbSrc = '{{ "/assets/img/file.svg" | relative_url }}';
       }
 
