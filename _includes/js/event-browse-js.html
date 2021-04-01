@@ -5,8 +5,8 @@
 function makeCard(obj) {
     // find item link
     var itemHref = "{{ '/events.html' | absolute_url | append: '?id=' }}" + obj.id;
-    // find images
-    var eventhasimagecheck = obj.eventimage;
+    // find imageseventimage
+    var eventhasimagecheck = obj.objectid;
     var imgSrc, thumbSrc;
     // add images or thumb for objects based on format
     if (eventhasimagecheck=="") {
