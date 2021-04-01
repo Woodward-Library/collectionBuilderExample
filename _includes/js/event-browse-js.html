@@ -9,7 +9,7 @@ function makeCard(obj) {
 
     var imgSrc, thumbSrc;
     // add images or thumb for objects based on format
-    if (object.filename=="empty") {
+    if (obj.filename=="empty") {
         thumbSrc = '{{ "/assets/img/file.svg" | relative_url }}';
       }
 
@@ -22,7 +22,7 @@ function makeCard(obj) {
 
       // start card
       var card = '<div class="item col-lg-4 col-md-6 col-sm-12 mb-2"><div class="card">';
-card+= eventhasimagecheck;
+card+= obj.filename;
 
       // top image for photos
       if(imgSrc) {
