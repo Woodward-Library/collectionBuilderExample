@@ -7,10 +7,9 @@ function makeCard(obj) {
     var itemHref = "{{ '/events.html' | absolute_url | append: '?id=' }}" + obj.id;
     // find images
     var eventhasimagecheck = obj.eventimage;
-    var eventimagelowercase = eventhasimagecheck.toLowerCase();
     var imgSrc, thumbSrc;
     // add images or thumb for objects based on format
-    if (eventhasimagelowercase=="") {
+    if (eventhasimagecheck=="") {
         thumbSrc = '{{ "/assets/img/file.svg" | relative_url }}';
       }
 
@@ -24,7 +23,7 @@ function makeCard(obj) {
       // start card
       var card = '<div class="item col-lg-4 col-md-6 col-sm-12 mb-2"><div class="card">';
 card+= eventhasimagecheck;
-      card +=  eventimagelowercase;
+
       // top image for photos
       if(imgSrc) {
         card += '<a href="' + itemHref + '"> <img class="card-img-top lazyload" data-src="' + imgSrc + '" alt="Image of ' + obj.title + '"></a>';
