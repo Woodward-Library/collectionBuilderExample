@@ -8,7 +8,7 @@ function makeCard(obj) {
     // find images
     var imgSrc, thumbSrc;
     // add images or thumb for objects based on format
-    if (obj.format.includes("event") and obj.filename != "") {
+    if (obj.filename != "") {
       imgSrc = obj.filename;
     }
     else {
