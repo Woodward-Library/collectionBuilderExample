@@ -22,7 +22,8 @@
                   <ul>
                     {% for item in eventTitle %}
 //limit display to 3 events
-                      {% if forloop.index == 3 %} 
+                      {% if forloop.index == 3 %}
+                      <h1>Index is 3!</h1>
                       {% break %}
                       {% endif %}
                     <li>{{eventTitle[forloop.index0]}}</li>
