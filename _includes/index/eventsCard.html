@@ -25,6 +25,11 @@
                     <li>{{eventDate[forloop.index0]}}</li>
                     <li> <a class="text-dark" href="{{ objectid[forloop.index0] | prepend: '/events.html?id=' | relative_url }}">link </a></li>
                     <br>
+                    {% if forloop.index == "3" %}
+                    {% break %}
+
+                    {% endif %}
+
                      {% endfor %}
                   </ul>
                {% else %}
