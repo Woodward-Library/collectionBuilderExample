@@ -9,7 +9,7 @@ function makeCard(obj) {
 
     var imgSrc, thumbSrc;
     // add images or thumb for objects based on format
-    if (obj.filename=="empty") {
+    if (obj.filename == empty) {
         thumbSrc = '{{ "/assets/img/file.svg" | relative_url }}';
       }
 
@@ -86,7 +86,6 @@ card+= obj.filename;
     return array;
   }
 
-//we just want to collect Event items into the item variable
 
 
   /* add items */
@@ -97,7 +96,7 @@ card+= obj.filename;
 
 
   /* randomize items once at page load */
-  shuffle(items);
+//  shuffle(items);
 
   function filterItems(arr,q) {
     // dont filter if no q
