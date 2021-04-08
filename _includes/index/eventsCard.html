@@ -27,7 +27,7 @@
                     <a class="text-dark" href="{{ objectid[forloop.index0] | prepend: '/events.html?id=' | relative_url }}">{{eventTitle[forloop.index0]}}</a>
                     <br>
                   <!--  {{eventDate[forloop.index0] | date:"%d %b, %Y"}} -->
-                    <br>
+                    
                     <script>
                       var thedate = {{ eventDate[forloop.index0] | jsonify }};
                       var newdate = new Date (thedate);
