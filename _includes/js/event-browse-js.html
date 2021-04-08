@@ -50,7 +50,7 @@ function makeCard(obj) {
       {% else %}
       //checking for Date
         {% if f.display_name =='Date' %}
-          {{obj[{{ f.field | jsonify }}] | date:"%d %b, %Y"}}
+         card += this is a date;
         {% else %}
       //original code below
         card += obj[{{ f.field | jsonify }}];
