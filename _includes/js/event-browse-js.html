@@ -53,14 +53,14 @@ function makeCard(obj) {
            card += 'this is a date ';
            var thedate = obj[{{ f.field | jsonify }}];
            var newdate = new Date (thedate);
-
-
            card += newdate.toDateString();
+           {% else %}
+           //original code below
+            card += obj[{{ f.field | jsonify }}];
         {% endif %}
 
 
-      //original code below
-        card += obj[{{ f.field | jsonify }}];
+
       {% endif %}
       {% unless forloop.last %}card += '<br>';{% endunless %}
       }
