@@ -23,7 +23,7 @@ function makeCard(obj) {
       // start card
       var card = '<div class="item col-lg-4 col-md-6 col-sm-12 mb-2"><div class="card">';
       //for testing output of filename
-      card+= obj.filename;
+      //card+= obj.filename;
 
       // top image for photos
       if(imgSrc) {
@@ -48,7 +48,12 @@ function makeCard(obj) {
         }
       }
       {% else %}
-      card += obj[{{ f.field | jsonify }}];
+      //checking for Date
+        {% if f.display_name =='Date' %}
+          {{obj[{{ f.field | jsonify }}] | date:"%d %b, %Y"}}
+        {% else %}
+      //original code below
+        card += obj[{{ f.field | jsonify }}];
       {% endif %}
       {% unless forloop.last %}card += '<br>';{% endunless %}
       }
