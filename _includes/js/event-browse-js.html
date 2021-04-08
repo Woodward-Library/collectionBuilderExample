@@ -52,7 +52,7 @@ function makeCard(obj) {
         {% if f.display_name == "Date"%}
            card += 'this is a date ';
            var thedate = obj[{{ f.field | jsonify }}];
-           var newdate = new Date (thedate);
+           var newdate = new Date.prototype.toDateString (thedate);
            card += newdate;
         {% endif %}
 
