@@ -49,8 +49,13 @@ function makeCard(obj) {
       }
       {% else %}
       //checking for Date
+        {% if f.display_name == "Date"%}
+           card += 'this is a date + o';
+        {% endif %}
+
+
         if (obj["date"]){
-         card += 'this is a date';
+
        }
         else{
 
