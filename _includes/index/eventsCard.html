@@ -21,13 +21,14 @@
                   {% when 'event' %}
 
                     {% for item in eventTitle %}
+                      <!-- adjust number if desired events to display on home is larger -->
                       {% if forloop.index == 3 %}
                       {% break %}
                       {% endif %}
                     <a class="text-dark" href="{{ objectid[forloop.index0] | prepend: '/events.html?id=' | relative_url }}">{{eventTitle[forloop.index0]}}</a>
                     <br>
                   <!--  {{eventDate[forloop.index0] | date:"%d %b, %Y"}} -->
-                    
+                    <!-- adjust dates into readable format - uses Month/Day/Year -->
                     <script>
                       var thedate = {{ eventDate[forloop.index0] | jsonify }};
                       var newdate = new Date (thedate);
