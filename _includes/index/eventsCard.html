@@ -19,17 +19,17 @@
 
                 {% case t %}
                   {% when 'event' %}
-                  <ul>
+
                     {% for item in eventTitle %}
                       {% if forloop.index == 3 %}
                       {% break %}
                       {% endif %}
-                    <li><a class="text-dark" href="{{ objectid[forloop.index0] | prepend: '/events.html?id=' | relative_url }}">{{eventTitle[forloop.index0]}}</a></li>
-                    <li>{{eventDate[forloop.index0] | date:"%d %b, %Y"}}</li>
+                    <a class="text-dark" href="{{ objectid[forloop.index0] | prepend: '/events.html?id=' | relative_url }}">{{eventTitle[forloop.index0]}}</a>
+                    {{eventDate[forloop.index0] | date:"%d %b, %Y"}}
                     <!-- day month year -->
                     <br>
                      {% endfor %}
-                  </ul>
+
                {% else %}
 
                 {% endcase %}
