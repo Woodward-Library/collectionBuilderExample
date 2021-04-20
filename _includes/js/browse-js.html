@@ -1,3 +1,4 @@
+
 {%- assign items = site.data[site.metadata] | where_exp: 'item','item.objectid' -%}
 {%- assign fields = site.data.config-browse -%}
 <script>
@@ -12,15 +13,17 @@ function makeCard(obj) {
       imgSrc = 'https://img.youtube.com/vi/' + obj.youtube + '/hqdefault.jpg';
     } else if (obj.format.includes("image")) {
       imgSrc = obj.filename;
+    } else if (obj.format.includes("book")) {
+      imgSrc = obj.filename;
     } else if (obj.format.includes("audio")) {
       thumbSrc = '{{ "/assets/img/audio.svg" | relative_url }}';
     } else if (obj.format.includes("video")) {
-      thumbSrc = '{{ "/assets/img/video.svg" | relative_url }}';  
+      thumbSrc = '{{ "/assets/img/video.svg" | relative_url }}';
     } else if (obj.format.includes("pdf")) {
       thumbSrc = '{{ "/assets/img/pdf.svg" | relative_url }}';
     } else {
       thumbSrc = '{{ "/assets/img/file.svg" | relative_url }}';
-    }  
+    }
     // start card
     var card = '<div class="item col-lg-4 col-md-6 col-sm-12 mb-2"><div class="card">';
     // top image for photos
@@ -54,7 +57,7 @@ function makeCard(obj) {
     card += '</p>';
     // media type
     if(obj.format != "") {
-      card += '<p class="card-text"><small><a class="btn btn-sm btn-outline-secondary" href="{{ '/browse.html' | relative_url }}#' + encodeURIComponent(obj.format) + '">' + 
+      card += '<p class="card-text"><small><a class="btn btn-sm btn-outline-secondary" href="{{ '/browse.html' | relative_url }}#' + encodeURIComponent(obj.format) + '">' +
         obj.format.split("/").pop().toUpperCase() + ' <span class="';
       if(obj.format.includes('image')){
         card += 'far fa-image';
@@ -96,11 +99,11 @@ function makeCard(obj) {
   shuffle(items);
 
   function filterItems(arr,q) {
-    // dont filter if no q 
-    if (q=="") { 
-      var filteredItems = arr; 
+    // dont filter if no q
+    if (q=="") {
+      var filteredItems = arr;
     } else {
-      q = q.trim().toUpperCase(); 
+      q = q.trim().toUpperCase();
       // 3 filter options, filter, grep, loop...
       // js filter
       /*
@@ -127,9 +130,9 @@ function makeCard(obj) {
         }
       }
     }
-    // add number 
+    // add number
     $("#numberOf").html(filteredItems.length + " of {{ items | size }} items");
-    
+
     // add stuff, make cards first in giant var, then add all at once to speed things up
     var cards = "";
     for (var i = 0, len = filteredItems.length; i < len; i++) {
@@ -152,7 +155,7 @@ function makeCard(obj) {
     query = "";
     filterItems(items,query);
   }
-  /* add hash if search button clicked */ 
+  /* add hash if search button clicked */
   $('#goButton').click( function() {
     window.location.hash = encodeURIComponent($('#quickSearch').val());
   });
@@ -162,7 +165,7 @@ function makeCard(obj) {
         window.location.hash = encodeURIComponent($('#quickSearch').val());
       }
   });
-  /* filter if hash changes */ 
+  /* filter if hash changes */
   $(window).on("hashchange", function() {
     // show spinner
     $("#loading").show();
@@ -204,5 +207,5 @@ $(".browse-sort-item").click(function (event) {
         shuffle(items);
         filterItems(items, query);
     }
-}); 
+});
 </script>
