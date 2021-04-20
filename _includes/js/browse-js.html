@@ -1,6 +1,5 @@
 {%- assign items = site.data[site.metadata] | where_exp: 'item','item.format != "event"' -%}
 
-<!-- {%- assign items = site.data[site.metadata] | where_exp: 'item','item.objectid' -%} -->
 {%- assign fields = site.data.config-browse -%}
 <script>
 
