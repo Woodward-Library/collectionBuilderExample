@@ -50,6 +50,13 @@ $on-jumbo:        1200px;
   background-color: #2F5D7C;
 }
 
+//aligning the image within the Card viewBox
+.card a{
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
 #ubc-logo {
   background-image: url(../img/ubc7-clf-sprite-white-2x.png) !important;
   background-position: 16px -437px;
